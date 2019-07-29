@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+function tekan() {
+    var nama = (document.form.inama.value);
+    var alamat = (document.form.ialamat.value);
+    document.form.onama.value = nama;
+    document.form.oalamat.value = alamat;
+}
+
+</script>
+
+
+    <form name="form">
+        <h2>masukkan data</h2>
+        <pre>
+            Nama: <input type="text" name="inama" size="11">
+            Alamat: <input type="text" name="ialamat" size="25">
+        </pre>
+        <br>
+        <input type="button" name="kirim" onclick="tekan()">
+        <input type="reset" value="ulang">
+        <h3>output</h3>
+        <pre>
+            jadi nama kamu adalah: <input type="text" name="onama" size="11">
+            Alamat kamu di: <input type="text" name="oalamat" size="25">
+        </pre>
+    </form>
+</body>
+</html>

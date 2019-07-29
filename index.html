@@ -1,0 +1,133 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+<script>
+    function tekan(){
+        var nik = (document.form.inik.value);
+        var nama = (document.form.inama.value);
+        var gender = (document.form.igender.value);
+        var agama = (document.form.iagama.value);
+        var status = (document.form.istatus.value);
+
+        document.form.onik.value = nik;
+        document.form.oname.value = nama;
+        document.form.ogender.value = gender;
+        document.form.oagama.value = agama;
+        document.form.ostatus.value = status;
+    }
+</script>
+
+<div class="header">
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h2>Data Mahasiswa</h2>
+        <h2>Universitas Komputer Indeonesia</h2>
+        <hr>
+    </div>
+</div>
+</div>
+<form name="form">
+    <div class="row m-1">
+        <div class="col-md-2">
+            Nomor Nik:
+        </div>
+        <div class="col-md-4">
+            <input type="text" name="inik" placeholder="01011  01001">
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-md-2">
+            Nama Mahasiswa:
+        </div>
+        <div class="col-md-4">
+            <input type="text" name="inama" placeholder="Nama Kamu">
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-md-2">
+            Jenis Kelamin:
+        </div>
+        <div class="col-md-4">
+            <select class="gender" name="igender">
+                <option value="perempuan">Perempuan</option>
+                <option value="laki-Laki">Laki-Laki</option>
+            </select>
+        </div>
+    <button type="button" onclick="tekan()" name="kirim">Submit</button>
+    <button type="reset">Reset</button>
+    </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-md-2">
+            Agama:
+        </div>
+        <div class="col-md-4">
+            <select class="agama" name="iagama">
+                <option value="islam">Islam</option>
+                <option value="kristen">Kristen Protestan</option>
+                <option value="katolik">Katolik</option>
+                <option value="hindu">Hindu</option>
+                <option value="buddha">Buddha</option>
+                <option value="koghucu">Kong Hu Cu</option>
+            </select>
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-md-2">
+            Status:
+        </div>
+        <div class="col-md-4">
+            <input type="radio" name="istatus" value="kawin">kawin
+            <input type="radio" name="istatus" value="belum">Belum Kawin
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-md-2">
+            Jurusan di UNIKOM:
+        </div>
+        <div class="col-md-4">
+            <select class="urusan"name="ijurusan">
+                <option>Teknik Informatika</option>
+                <option>Lainya</option>
+            </select>
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-md-2">
+            Komentar:
+        </div>
+        <div class="col-md-4">
+            <textarea name="ikomentar" id="komentar" cols="30" rows="3">Ini kolom komentar
+            </textarea>
+        </div>
+    </div>
+    <div class="tombol text-center">
+    <br>
+    nik: <input type="text" name="onik">
+    nama: <input type="text" name="oname">
+    <br>
+    gender: <input type="text" name="ogender">
+    agama: <input type="text" name="oagama">
+    <br>
+    status: <input type="text" name="ostatus">
+    Jurusan: <input type="text" name="ojurusan">
+    <br>
+    Komentar: <input type="text" name="okomentar">
+</form>
+
+
+<div name="output">
+
+</div>
+</body>
+</html>
